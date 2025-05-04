@@ -9,7 +9,7 @@ console.log(`\n MongoDb Connected !! Db Host: ${connectionInstance}`)
 
 }
  catch (error) {
-   console.log("DataBase Connection error", error);
+   console.log("DataBase Connection error", error)
    process.exit(1)
 }
 
