@@ -15,4 +15,4 @@ console.log(`\n MongoDb Connected !! Db Host: ${connectionInstance}`)
 
 }
 
-export default ConnectDb
+export default  ConnectDb 
