@@ -5,7 +5,7 @@
      statusCode,
      message= "Somthing went wrong",
      error= [],
-    statck = ""
+    stack = ""
    ){
 
     super(message)
@@ -15,8 +15,8 @@
    this.sucess = false,
    this.errors = errors
   
-  if (statck) {
-    this.stack = statck
+  if (stack) {
+    this.stack = stack
 
 } else{
    Error.captureStackTrace(this, this.constructor)
