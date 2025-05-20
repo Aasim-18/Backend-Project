@@ -29,4 +29,4 @@
 
 
 
-export default {ApiError}
+export  { ApiError }
