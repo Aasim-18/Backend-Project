@@ -4,11 +4,11 @@
 
  import { User } from '../models/user.model.js';
 
+import { uploadCloudinary } from '../utils/cloudinary.js';
 
 
 
-
- const registerUser =   asyncHandler( (req, res) => {
+ const registerUser =   asyncHandler( async  (req, res) => {
 
  
   const {fullName, email, username, passsord} = req.body
@@ -41,9 +41,23 @@ if (!avatarLocalPath || !coverImageLocalPath) {
 }
 
 
+const avatar = await uploadCloudinary(avatarLocalPath);
 
+const coverImage = await uploadCloudinary(coverImageLocalPath)
 
+if (avatar) {
 
+ throw new ApiError(400, "avatar image is required")
+}
+
+const user = await User.create({
+ fullName,
+  avatar: avatar.url,
+  coverImage: coverImage.url,
+  email,
+ username: username.toLowerCase(),
+ password
+ })
 
 
 })
