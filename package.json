@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
+    "start": "node -r dotenv/config  src/index.js"
   },
   "keywords": [
     "javascript",
@@ -15,6 +15,7 @@
   "author": "Syed Aasim",
   "license": "ISC",
   "dependencies": {
+    "@mongodb-js/saslprep": "^1.2.2",
     "bcryptjs": "^3.0.2",
     "cloudinary": "^2.6.1",
     "cookie-parser": "^1.4.7",
