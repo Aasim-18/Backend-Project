@@ -11,7 +11,7 @@ import { uploadCloudinary } from '../utils/cloudinary.js';
 
  if (
   [fullName, email, username, password].some((field) => 
-  field?.trim() === "") 
+  field?.trim() === "")
  ) {
 
   throw new ApiError(400, "All field are reqired")
@@ -27,7 +27,7 @@ if (existedUser) {
   throw new ApiError(409, "User with email or username exist")
 
  };
-
+console.log(req.files)
 const avatarLocalPath = req.files?.avatar[0]?.path
 
 const coverImageLocalPath = req.files?.coverImage[0]?.path
