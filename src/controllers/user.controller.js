@@ -2,7 +2,7 @@ import asyncHandler from '../utils/asynchandler.js';
 import { ApiError } from '../utils/ApiErrors.js';
 import { User } from '../models/user.model.js';
 import { uploadCloudinary } from '../utils/cloudinary.js';
-import { isPasswordCorrect } from '../models/user.model.js';
+
 
 
 
@@ -21,7 +21,7 @@ const refreshToken = user.generateRefreshToken()
 
 } catch (error) {
 
-throw new ApiError(500, "Somthing went wrong while generating referesh and access token"}
+throw new ApiError(500, "Somthing went wrong while generating referesh and access token")
 }
 
 }
