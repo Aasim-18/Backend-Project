@@ -55,7 +55,7 @@ const avatarLocalPath = req.files?.avatar[0]?.path
 
 const coverImageLocalPath = req.files?.coverImage[0]?.path
 
-if (!avatarLocalPath || !coverImageLocalPath) {
+if (!avatarLocalPath && !coverImageLocalPath) {
  throw new ApiError(500, "avatar or coverImage not found")
 }
 
@@ -97,7 +97,7 @@ const userlogin = asyncHandler(async (req, res) => {
 
 const {username, email, password} = req.body
 
- if(!username || !email) {
+ if(!username && !email) {
  throw new ApiError(400, "username or email is requred")
  }
 
