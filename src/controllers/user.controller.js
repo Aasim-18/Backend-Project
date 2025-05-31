@@ -166,4 +166,7 @@ const option = {
     .json(new ApiResponse(200, {}, "User logged Out"))
 }) 
 
-export { registerUser, userlogin }
+export { registerUser,
+         
+          userlogin, 
+           logoutuser }
