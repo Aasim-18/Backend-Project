@@ -163,7 +163,7 @@ const option = {
     .status(200)
     .clearCookie("accessToken", options)
     .clearCookie("refreshToken", options)
-    .json(new ApiResponse(200, {}, "User logged Out")
+    .json(new ApiResponse(200, {}, "User logged Out"))
 })
 
 const RefreshAccessToken = asyncHandler( async(req, res) => {
@@ -201,7 +201,7 @@ const {accessToken, newRefreshToken} = generateAccessAndRefereshTokens(user._id)
                                    200,
                              {accesstoken, refreshtoken: newRefreshToken},
                                         "AccessToken Refreshed"
-                             )
+                             ))
 
 })
 
